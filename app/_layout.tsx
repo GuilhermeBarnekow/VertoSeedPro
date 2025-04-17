@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
@@ -28,9 +29,9 @@ export default function RootLayout() {
     return (
       <View style={styles.videoContainer}>
         <Video
-          source={{
-            uri: 'https://stackblitz.com/storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOVk4Wnc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--a58c939ebfbc1116e48375ab8a7bfe23eb06f90c/encerramento%20verto%20-%20fundo%20branco.mp4'
-          }}
+          // Como o vídeo está na raiz do projeto e este arquivo está em "app",
+          // o caminho relativo deve subir um nível:
+          source={require('../encerramento-verto-fundo-branco.mp4')}
           style={[
             styles.video,
             {

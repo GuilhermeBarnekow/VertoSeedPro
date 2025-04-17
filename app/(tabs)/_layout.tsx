@@ -16,7 +16,7 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Calculadora',
-          headerTitle: 'Calculadora de Sementes',
+          headerTitle: 'Verto SeedPro',
           tabBarIcon: ({ size, color }) => (
             Platform.select({
               web: <Ionicons name="calculator" size={size} color={color} />,
